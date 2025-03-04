@@ -1,0 +1,16 @@
+{
+  "name": "blog.js",
+  "version": "1.0.0",
+  "description": "Minimal blogging using Node.js",
+  "main": "blog.js",
+  "scripts": {
+    "start": "node blog.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.7"
+  },
+  "devDependencies": {},
+  "author": "W3Teal",
+  "license": "MIT"
+}
