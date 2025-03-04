@@ -42,7 +42,7 @@ function buildHTML({
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} - W3Teal</title>
     <meta name="description" content="${description}">
-    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="icon" href="/assets/logo.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
@@ -62,6 +62,13 @@ function buildHTML({
     <main class="markdown-body">
         ${content}
     </main>
+    <footer>
+        <p>
+        © 2025 W3Teal <br>
+        <small>Content of this website is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise stated. <br>
+        Contact me via <a href="mailto:blog@w3teal.is-a.dev">Email</a>, <a rel="me" href="https://github.com/w3teal">GitHub</a> and <a rel="me" href="https://fosstodon.org/@w3teal">Mastodon</a>. Or else on the <a href="/contact/">/contact page</a>, but I may take a long time to respond. </small>
+        </p>
+    </footer>
 </body>
 </html>`;
 }
