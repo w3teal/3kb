@@ -11,3 +11,4 @@ description: Slash (blah), slash this, slash that
 - [/contact](/contact) - Where you can find me.
 - [/guestbook](/guestbook) - A place to share your little messages publicly.
 - [/now](/now) - A little bit of what I’m doing at the moment.
+- [/uses](/uses) - What do I use to live my digital world?
