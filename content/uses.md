@@ -18,12 +18,12 @@ description: What do I use to live my digital world?
 
 ## Software
 
-- Browser: Chrome (don't mad ngl, i tryna to switch to Firefox)
+- Browser: ~~Chrome~~ Thorium
 - OS: Windows 11 (i hope i never update from Windows 10)
 - Mail: GMail, Protonmail, Disroot, with ImprovMX for alias
 - Music: Spotify, using Last.fm to analytics
 - IDE: VSCodium, GitHub Desktop, Windows Terminal
-- Coding: HTML, CSS, JS
+- Coding: HTML, CSS, JS (with Node.js)
 - Zip things: WinRAR and NanaZip (Fluent Designed 7zip fork)
 - Password: Bitwarden
 - Cloud storage: Google Drive

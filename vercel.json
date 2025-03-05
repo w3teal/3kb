@@ -1,0 +1,4 @@
+{
+    "builds": [{ "src": "weblog.js", "use": "@vercel/node" }],
+    "routes": [{ "src": "/(.*)", "dest": "/_site/$1" }]
+}  

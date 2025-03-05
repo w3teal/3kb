@@ -8,6 +8,7 @@ description: Slash (blah), slash this, slash that
 
 - [/ai](/ai) - How AI is used on this website!
 - [/blogroll](/blogroll) - My favorite websites.
+- [/colophon](/colophon) - How this website is made.
 - [/contact](/contact) - Where you can find me.
 - [/guestbook](/guestbook) - A place to share your little messages publicly.
 - [/now](/now) - A little bit of what I’m doing at the moment.

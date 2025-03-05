@@ -1,0 +1,13 @@
+{
+    "siteTitle": "W3Teal",
+    "siteDescription": "I am a frontend developer from North Sumatra, Indonesia who loves solving hard problems in a light way. I love F(L)OSS software, especially the light ones!",
+    "siteUrl": "https://w3teal.is-a.dev",
+    "inputDir": "content",
+    "outputDir": "_site",
+    "postsDir": "content/posts",
+    "licenseName": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "contactEmail": "blog@w3teal.is-a.dev",
+    "githubUrl": "https://github.com/w3teal",
+    "mastodonUrl": "https://fosstodon.org/@w3teal"
+}
