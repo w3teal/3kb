@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing images through Cloudinary (and why I love it) - W3Teal</title>
+    <meta name="description" content="You don't always have to rely on Git to upload images!">
+    <link rel="icon" href="/assets/logo.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/"><img src="/assets/logo.svg" alt="W3Teal Logo" width="48" height="48"></a>
+            <nav>
+                <a href="/archives/">Post Archives</a>
+                <a href="/about/">About</a>
+                <a href="/slashes/">Slashes</a>
+            </nav>
+        </nav>
+        <h1>Managing images through Cloudinary (and why I love it)</h1>
+        <p class="date">2025-03-01</p>
+        <p class="description">You don't always have to rely on Git to upload images!</p>
+    </header>
+    <article class="markdown-body">
+        <p>Since I use Reprose as my posting CMS, managing images has become the hardest part. I am too lazy to upload and commit each image via Git.</p>
+<p><img src="https://res.cloudinary.com/w3teal/image/upload/v1740795542/2025-03-01_09_18_36-Editing_the_file___Reprose_ctcdd0.jpg" alt="Reprose imaging"></p>
+<p>So what was my solution? I searched for an image management website, and I found Cloudinary, a widely known image provider, including the Astro Paper demo which also uses Cloudinary as its default OG image provider. The dashboard is very easy to understand.</p>
+<p><img src="https://res.cloudinary.com/w3teal/image/upload/v1740795972/cloudinary-upload_aki9i2.png" alt="Upload dashboard in Cloudinary">
+<img src="https://res.cloudinary.com/w3teal/image/upload/v1740795782/cloudinary_jnlqlx.png" alt="Cloudinary dashboard"></p>
+<p>And to copy the URL to that image, just press this &quot;<strong>&lt;&gt;</strong>&quot; button.</p>
+<p><img src="https://res.cloudinary.com/w3teal/image/upload/v1740795886/cloudinary-copy_mg6vjw.jpg" alt="Copy URL to image in Cloudinary"></p>
+<p>And other great reasons to use Cloudinary are:</p>
+<ul>
+<li><a href="https://cloudinary.com/documentation/cloudinary_sdks">Very extensive API</a></li>
+<li><a href="https://cloudinary.com/documentation/transformation_reference">Lots of customization possible</a></li>
+<li>Very fast, even faster than loading fonts!</li>
+</ul>
+<h2><a href="https://github.com/w3teal/rescname">rescname</a></h2>
+<p>I created a new project called &quot;rescname&quot; to use custom domain for Cloudinary. This project is very simple, just deploy and add environment name variable. And you can shorten url like:
+<a href="https://res.cloudinary.com/ksjjaoko/image/upload/v1740793104/Example_wdy6ow.png">https://res.cloudinary.com/ksjjaoko/image/upload/v1740793104/Example_wdy6ow.png</a>
+to
+<a href="https://img.ksjjaoko.com/image/upload/v1740793104/Example_wdy6ow.png">https://img.ksjjaoko.com/image/upload/v1740793104/Example_wdy6ow.png</a> (Change custom domain via Vercel, you can also use free domain vercel.app.)</p>
+<p>To get the environment name, go to <a href="https://console.cloudinary.com/settings/product-environments">Settings &gt; Product Environments</a>. Here is an example of the environment name (here it is called &quot;w3teal&quot;)</p>
+<p><img src="https://res.cloudinary.com/w3teal/image/upload/v1740796563/cloudinary-env_opifgh.jpg" alt="Example of Environment name"></p>
+<p>If you want to change the name, just tap on the Environment name, and change the content of the &quot;Cloud name&quot; input.</p>
+<p><img src="https://res.cloudinary.com/w3teal/image/upload/v1740796841/cloudinary-name_kxga03.png" alt="Changing the Environment (Cloud) name"></p>
+<p>Interested in using it? Just go to <a href="https://cloudinary.com/">https://cloudinary.com/</a> and you will find the &quot;Sign Up&quot; button. Have fun here!</p>
+<hr>
+<p><em>Note: This post is not affiliated with Cloudinary.</em></p>
+
+    </article>
+    <footer>
+        <p>© 2025 W3Teal<br>
+        <small>Content of this website is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise stated. <br>
+        Contact me via <a href="mailto:blog@w3teal.is-a.dev">Email</a>, <a rel="me" href="https://github.com/w3teal">GitHub</a>, and <a rel="me" href="https://fosstodon.org/@w3teal">Mastodon</a>. Or else on the <a href="/contact/">/contact page</a>, but I may take a long time to respond. <br>
+        Check out the <a href="/colophon/">/colophon page</a> to see how this website is built. Subscribe with your RSS reader from <a href="/rss.xml">rss.xml</a>.</small>
+        </p>
+    </footer>
+</body>
+</html>

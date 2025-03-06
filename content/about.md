@@ -21,7 +21,3 @@ There's so much you can learn about me, but here the curated:
 - I was born and live in North Sumatra, Indonesia. (No [#KaburAjaDulu](https://id.wikipedia.org/wiki/KaburAjaDulu))
 - I'm high [The Weeknd](https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ) and [Twenty One Pilots](https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx) fans
 - [![Markdown Badges for LastFM](https://badges.lastfm.workers.dev/last-played?user=ligmatv&color=green)](https://www.last.fm/user/ligmatv)
-
-> The time is in ISO format so I can easily copy it to `pubDatetime`: <strong id="datetime"></strong>
-
-<script>document.getElementById("datetime").textContent = new Date().toISOString();</script>

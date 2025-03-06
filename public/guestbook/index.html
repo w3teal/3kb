@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook - W3Teal</title>
+    <meta name="description" content="Give your opinion about my blog publicly!">
+    <link rel="icon" href="/assets/logo.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/"><img src="/assets/logo.svg" alt="W3Teal Logo" width="48" height="48"></a>
+            <nav>
+                <a href="/archives/">Post Archives</a>
+                <a href="/about/">About</a>
+                <a href="/slashes/">Slashes</a>
+            </nav>
+        </nav>
+        <h1>Guestbook</h1>
+        <p class="date">2025-03-02</p>
+        <p class="description">Give your opinion about my blog publicly!</p>
+    </header>
+    <article class="markdown-body">
+        <blockquote>
+<p>Inspired by <a href="https://gabbott.dev/guestbook">George Abbott</a>. Thank you to <a href="https://meadow.cafe/">Meadow</a> for hosting this Guestbook! <a href="https://codeberg.org/meadowingc/guestbooks">(Open source)</a></p>
+</blockquote>
+<p><strong><a href="#guestbooks___guestbook-messages-header">⬇️💬 Go to Messages</a></strong></p>
+<section class="guestbook">
+    <script async src="https://guestbooks.meadow.cafe/resources/js/embed_script/410/script.js"></script> 
+    <div id="guestbooks___guestbook-form-container">
+        <form id="guestbooks___guestbook-form" action="https://guestbooks.meadow.cafe/guestbook/410/submit" method="post">
+            <div class="guestbooks___input-container">
+                <input placeholder="Name" type="text" id="name" name="name" required>
+            </div>
+            <div class="guestbooks___input-container">
+                <input placeholder="Website (optional)" type="url" id="website" name="website">
+            </div>
+            <div id="guestbooks___challenge-answer-container"></div>  
+            <br/>
+            <div class="guestbooks___input-container">
+                <textarea placeholder="Message (plain text only)..." id="text" name="text" style="width: 100%; box-sizing: border-box; resize: vertical;" required></textarea>
+            </div>
+            <br/>
+            <input type="submit" value="Submit">
+            <div id="guestbooks___error-message"></div>  
+        </form>
+    </div>
+    <div id="guestbooks___guestbook-made-with" style="text-align: right;">
+        <small>Lovingly made with <a target="_blank" href="https://guestbooks.meadow.cafe">Guestbooks</a></small>
+    </div>  
+    <hr style="margin: 1em 0;"/>
+    <h3 id="guestbooks___guestbook-messages-header">Messages</h3>
+    <div id="guestbooks___guestbook-messages-container"></div>  
+<section>
+
+    </article>
+    <footer>
+        <p>© 2025 W3Teal<br>
+        <small>Content of this website is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise stated. <br>
+        Contact me via <a href="mailto:blog@w3teal.is-a.dev">Email</a>, <a rel="me" href="https://github.com/w3teal">GitHub</a>, and <a rel="me" href="https://fosstodon.org/@w3teal">Mastodon</a>. Or else on the <a href="/contact/">/contact page</a>, but I may take a long time to respond. <br>
+        Check out the <a href="/colophon/">/colophon page</a> to see how this website is built. Subscribe with your RSS reader from <a href="/rss.xml">rss.xml</a>.</small>
+        </p>
+    </footer>
+</body>
+</html>

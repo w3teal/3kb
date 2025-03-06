@@ -6,7 +6,9 @@ const config = require('./weblog.config.json');
 
 const inputDir = config.inputDir;
 const outputDir = config.outputDir;
-const postsDir = path.join(inputDir, 'posts');
+const postsDir = config.postsDir;
+const layoutPath = config.layoutPath;
+const rssPath = path.join(outputDir, 'rss.xml');
 
 // Format date to YYYY-MM-DD
 function formatDate(dateStr) {
@@ -29,44 +31,15 @@ function getOutputPath(mdFile) {
         path.join(outputDir, parsed.dir, parsed.name, 'index.html');
 }
 
-// Build the HTML structure
-function buildHTML({ title, date, description, content }) {
-    return `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title} - ${config.siteTitle}</title>
-    <meta name="description" content="${description.replace(/"/g, '&quot;')}">
-    <link rel="icon" href="/assets/logo.svg" sizes="any" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a class="logo" href="/"><img src="/assets/logo.svg" alt="${config.siteTitle} Logo" width="48" height="48"></a>
-            <nav>
-                <a href="/archives/">Post Archives</a>
-                <a href="/about/">About</a>
-                <a href="/slashes/">Slashes</a>
-            </nav>
-        </nav>
-        <h1>${title}</h1>
-        <p class="date">${date}</p>
-        <p class="description">${description}</p>
-    </header>
-    <article class="markdown-body">
-        ${content}
-    </article>
-    <footer>
-        <p>© ${new Date().getFullYear()} ${config.siteTitle}<br>
-        <small>Content of this website is licensed under <a href="${config.licenseUrl}">${config.licenseName}</a> unless otherwise stated. <br>
-        Contact me via <a href="mailto:${config.contactEmail}">Email</a>, <a rel="me" href="${config.githubUrl}">GitHub</a>, and <a rel="me" href="${config.mastodonUrl}">Mastodon</a>. Or else on the <a href="/contact/">/contact page</a>, but I may take a long time to respond. <br>
-        Check out the <a href="/colophon/">/colophon page</a> to see how this website is built. Subscribe with your RSS reader from <a href="/rss.xml">rss.xml</a>.</small>
-        </p>
-    </footer>
-</body>
-</html>`;
+// Create HTML file content based on layout and replace variables
+function buildHTML(replacements) {
+    let layout = fs.readFileSync(layoutPath, 'utf-8');
+
+    Object.keys(replacements).forEach(key => {
+        layout = layout.replace(new RegExp(`\\$\\{${key}\\}`, 'g'), replacements[key]);
+    });
+
+    return layout;
 }
 
 // Get posts and sort them by date
@@ -90,7 +63,7 @@ function getPosts(limit = null) {
         });
     }
 
-    traverse(config.postsDir);
+    traverse(postsDir);
     files.sort((a, b) => new Date(b.date) - new Date(a.date));
     return limit ? files.slice(0, limit) : files;
 }
@@ -125,8 +98,9 @@ function generateRSS() {
         </channel>
     </rss>`;
 
-    fs.writeFileSync(path.join(outputDir, 'rss.xml'), rssFeed, 'utf-8');
-    console.log('RSS feed generated: rss.xml');
+    fs.mkdirSync(outputDir, { recursive: true });
+    fs.writeFileSync(rssPath, rssFeed, 'utf-8'); 
+    console.log('RSS feed generated:', rssPath);
 }
 
 // Convert Markdown to HTML
@@ -137,7 +111,6 @@ function convertMarkdown(mdFile) {
     const listingFull = generateListing();
     const listingLatest = (match, x) => generateListing(parseInt(x, 10));
 
-    // Replace ${_listing} and ${_listing latest X}
     const replacedContent = content
         .replace(/\$\{_listing\}/g, listingFull)
         .replace(/\$\{_listing latest (\d+)\}/g, listingLatest);
@@ -145,12 +118,17 @@ function convertMarkdown(mdFile) {
     const htmlContent = marked(replacedContent);
     const outputPath = getOutputPath(mdFile);
 
-    const html = buildHTML({
+    const layoutData = {
         title: data.title || 'Untitled',
         date: data.date ? formatDate(data.date) : '',
         description: data.description || '',
-        content: htmlContent
-    });
+        content: htmlContent,
+        siteTitle: config.siteTitle,
+        lang: data.lang || 'en',
+        rss: fs.readFileSync(path.join(outputDir, 'rss.xml'), 'utf-8')
+    };
+
+    const html = buildHTML(layoutData);
 
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     fs.writeFileSync(outputPath, html, 'utf-8');
@@ -169,6 +147,10 @@ function processDirectory(dir) {
     });
 }
 
-// Run the conversion process
-processDirectory(inputDir);
-generateRSS();
+// Running weblog compiler, and vibing
+function weblogCompiler() {
+    generateRSS();
+    processDirectory(inputDir);
+}
+
+weblogCompiler();

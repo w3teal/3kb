@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I have rewritten this website. - W3Teal</title>
+    <meta name="description" content="Finding a SSG was a very difficult decision, so I created a new SSG (?!)">
+    <link rel="icon" href="/assets/logo.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/"><img src="/assets/logo.svg" alt="W3Teal Logo" width="48" height="48"></a>
+            <nav>
+                <a href="/archives/">Post Archives</a>
+                <a href="/about/">About</a>
+                <a href="/slashes/">Slashes</a>
+            </nav>
+        </nav>
+        <h1>I have rewritten this website.</h1>
+        <p class="date">2025-03-04</p>
+        <p class="description">Finding a SSG was a very difficult decision, so I created a new SSG (?!)</p>
+    </header>
+    <article class="markdown-body">
+        <p>Yep, this website has been rewritten using my own SSG! (with ChatGPT, it can be done in ~1 day!). So why did I recreate this website again? Isn&#39;t the old Astro website already very good in terms of SEO and accessibility?</p>
+<p>I can say yes, and also the reason I chose the <a href="https://github.com/satnaing/astro-paper">Astro Paper</a> theme is also because of its simplicity. But even though it&#39;s simple, there are a lot of bloat js codes scattered everywhere. And even a single file is <a href="https://radar.cloudflare.com/scan/fdc5465a-6b1e-43fa-93bf-9bb8b82b2491">already ~1 MB</a> 😭.</p>
+<p>And also I was amazed by the collection of fast websites &quot;<a href="https://512kb.club/">512KB Club</a>&quot;. I felt sad that my website which is even less useful, could be this big 🥲. So for 2 days I didn&#39;t post, I searched for various SSGs and tried them.</p>
+<ol>
+<li><p><a href="https://www.getzola.org/">Zola</a><br>This SSG was recommended by <a href="https://www.kytta.dev/blog/one-week-with-zola/">Nikita Karamov</a>. At first, I was very happy because it was very fast in processing my markdown files. And that was the first time I styled my own website (This is what the new website looks like). But my problem with using this is, the frontmatter must be fully equipped, and if not it will throw an error. And often when the error is not related to the article, it does not fully explain where it is.</p>
+</li>
+<li><p><a href="https://metalsmith.io/">Metalsmith</a><br>To me, it&#39;s a name that sounds like &quot;Wow, this is classic&quot;. I tried it and the experience was similar to 11ty. The difference here is that the data cannot be loaded automatically, while 11ty data is in its directory - Oh yeah, both are about data. And when there was an error, I was confused when the localhost could not move, apparently Metalsmith automatically closed and only left the error log. What kind of guest is this?</p>
+</li>
+<li><p><a href="https://github.com/sunainapai/makesite">makesite.py</a><br>At this point, I&#39;ve gone deeper into searching for SSG. All I want is It&#39;s simple and 1 file. It seems makesite.py is a good fit for me, if this garbage can at least run.</p>
+</li>
+</ol>
+<p>Since almost all the random SSGs I tried didn&#39;t work, I ended up being lazy to create a blog again, bruh. But after seeing many people making their own SSGs to create their lightweight websites, like <a href="https://www.karl.berlin/">Karl Bartel</a> with his <a href="https://github.com/karlb/karl.berlin">blog.sh</a>, <a href="https://nih.ar/">Nihar Samantaray</a> with his <a href="https://pypi.org/project/pidgeotto/">Pidgeotto</a>, I became impressed and interested in making my own SSG too, and &quot;blog.js&quot; was born. A generic name, right? Or just say &quot;@w3teal/blog.js&quot;. So I spent almost ~1 day to create this SSG. The main feature is, it&#39;s very portable. Only one &quot;blog.js&quot; file to use it, almost similar to makesite.py.</p>
+<p>Other features that people really need are, like Markdown (with Marked.js), Frontmatter (with Graymatter), post listing and custom layout. Very generic, right? To get all this done, it only takes ~136 lines! And the workflow is:</p>
+<ol>
+<li>npm start</li>
+<li>http-server (Optional, to see the results directly)</li>
+<li><em>(repeat npm start)</em></li>
+<li>Deploy the _site directory!</li>
+</ol>
+<p>Workflow in blog.js be like:
+<img src="/assets/cmd-blogjs.jpg" alt="CMD with blog.js"></p>
+<p>The features I would like to implement in the future are xml feeds and og images (impossible...)</p>
+<p>So that&#39;s it, if you&#39;re interested in this project, you can head over to the <a href="https://github.com/w3teal/blog.js">w3teal/blog.js</a> repo! Have fun!</p>
+
+    </article>
+    <footer>
+        <p>© 2025 W3Teal<br>
+        <small>Content of this website is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise stated. <br>
+        Contact me via <a href="mailto:blog@w3teal.is-a.dev">Email</a>, <a rel="me" href="https://github.com/w3teal">GitHub</a>, and <a rel="me" href="https://fosstodon.org/@w3teal">Mastodon</a>. Or else on the <a href="/contact/">/contact page</a>, but I may take a long time to respond. <br>
+        Check out the <a href="/colophon/">/colophon page</a> to see how this website is built. Subscribe with your RSS reader from <a href="/rss.xml">rss.xml</a>.</small>
+        </p>
+    </footer>
+</body>
+</html>

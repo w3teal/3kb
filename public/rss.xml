@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <rss version="2.0">
+        <channel>
+            <title><![CDATA[W3Teal]]></title>
+            <link>https://w3teal.is-a.dev</link>
+            <description><![CDATA[I am a frontend developer from North Sumatra, Indonesia who loves solving hard problems in a light way. I love F(L)OSS software, especially the light ones!]]></description>
+            
+        <item>
+            <title><![CDATA[Are slashes worth it?]]></title>
+            <link>https://w3teal.is-a.dev/posts/slashes/</link>
+            <description><![CDATA[What is the importance of sharing light information with (/it, /this)?]]></description>
+            <pubDate>Wed, 05 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[I have rewritten this website.]]></title>
+            <link>https://w3teal.is-a.dev/posts/rewrite-website/</link>
+            <description><![CDATA[Finding a SSG was a very difficult decision, so I created a new SSG (?!)]]></description>
+            <pubDate>Tue, 04 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[#100DaysToOffload]]></title>
+            <link>https://w3teal.is-a.dev/posts/100daystooffload/</link>
+            <description><![CDATA[Every day is worth writing down, how about making it into a contest?]]></description>
+            <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Blogging is a therapy for programmers]]></title>
+            <link>https://w3teal.is-a.dev/posts/blogging/</link>
+            <description><![CDATA[A good start must be with good hope!]]></description>
+            <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Managing images through Cloudinary (and why I love it)]]></title>
+            <link>https://w3teal.is-a.dev/posts/cloudinary/</link>
+            <description><![CDATA[You don't always have to rely on Git to upload images!]]></description>
+            <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Selecting my favorite fonts]]></title>
+            <link>https://w3teal.is-a.dev/posts/fonts/</link>
+            <description><![CDATA[A beautiful font from the default, no need to be tacky.]]></description>
+            <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA["Sekolah" obligations]]></title>
+            <link>https://w3teal.is-a.dev/posts/sekolah-obligations/</link>
+            <description><![CDATA[Schools do not always know what is better]]></description>
+            <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Windows 11 is never stable]]></title>
+            <link>https://w3teal.is-a.dev/posts/windows-11/</link>
+            <description><![CDATA[Windows 11 has never had any stability in design or performance]]></description>
+            <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Using Reprose as a CMS for writing with GitHub]]></title>
+            <link>https://w3teal.is-a.dev/posts/use-reprose/</link>
+            <description><![CDATA[You don't need a CMS if your posts are hosted on GitHub!]]></description>
+            <pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[3D]]></title>
+            <link>https://w3teal.is-a.dev/posts/3d/</link>
+            <description><![CDATA[The easiest way to convey realtime things on the web]]></description>
+            <pubDate>Thu, 27 Feb 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[New beginning]]></title>
+            <link>https://w3teal.is-a.dev/posts/new-beginning/</link>
+            <description><![CDATA[New beginning of me, W3Teal.]]></description>
+            <pubDate>Thu, 27 Feb 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Me and proprietary software]]></title>
+            <link>https://w3teal.is-a.dev/posts/proprietary-software/</link>
+            <description><![CDATA[Proud to use open source software, adore it but still proprietary software cannot be replaced]]></description>
+            <pubDate>Thu, 27 Feb 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[W3Teal & Fosstodon]]></title>
+            <link>https://w3teal.is-a.dev/posts/w3teal-fosstodon/</link>
+            <description><![CDATA[Choosing an instance on Mastodon is hard, I really like Fosstodon because it has dev, web, and FOSS themes.]]></description>
+            <pubDate>Tue, 25 Feb 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[How to embed your Mastodon profile]]></title>
+            <link>https://w3teal.is-a.dev/posts/embed-mastodon/</link>
+            <description><![CDATA[In X (aka Twitter), you can easily embed your profile page via their official page. But, how you can do it in Mastodon?]]></description>
+            <pubDate>Sat, 11 Jan 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+        </channel>
+    </rss>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to embed your Mastodon profile - W3Teal</title>
+    <meta name="description" content="In X (aka Twitter), you can easily embed your profile page via their official page. But, how you can do it in Mastodon?">
+    <link rel="icon" href="/assets/logo.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/"><img src="/assets/logo.svg" alt="W3Teal Logo" width="48" height="48"></a>
+            <nav>
+                <a href="/archives/">Post Archives</a>
+                <a href="/about/">About</a>
+                <a href="/slashes/">Slashes</a>
+            </nav>
+        </nav>
+        <h1>How to embed your Mastodon profile</h1>
+        <p class="date">2025-01-11</p>
+        <p class="description">In X (aka Twitter), you can easily embed your profile page via their official page. But, how you can do it in Mastodon?</p>
+    </header>
+    <article class="markdown-body">
+        <p>In X (aka Twitter), you can easily embed your profile page via <a href="https://publish.twitter.com/">their official page</a>. But, how you can do it in Mastodon? Here the step-by-step tutorial how to make it.</p>
+<h2>1. Import the module</h2>
+<p>You can import the file via JSDelivr CDN. <a href="https://gitlab.com/idotj/mastodon-embed-timeline#cdn">(Source)</a></p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@idotj/mastodon-embed-timeline@4.4.2/dist/mastodon-timeline.min.css&quot; integrity=&quot;sha256-1UGgxsonaMCfOEnVOL89aMKSo3GEAmaRP0ISbsWa6lU=&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/@idotj/mastodon-embed-timeline@4.4.2/dist/mastodon-timeline.umd.js&quot; integrity=&quot;sha256-E6WPG6iq+qQIzvu3HPJJxoAeRdum5siq13x4ITjyxu8=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2>2. Add the embed wrapper</h2>
+<p>You can embed that in whenever place you want. <a href="https://gitlab.com/idotj/mastodon-embed-timeline#initialize">(Source)</a></p>
+<pre><code class="language-html">&lt;div id=&quot;mt-container&quot; class=&quot;mt-container&quot;&gt;
+  &lt;div class=&quot;mt-body&quot; role=&quot;feed&quot;&gt;
+    &lt;div class=&quot;mt-loading-spinner&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>3. Add JS configuration</h2>
+<p>After import and add the wrapper, now you need to add the <code>MastodonTimeline</code> config. <a href="https://gitlab.com/idotj/mastodon-embed-timeline#profile-timeline">(Source)</a></p>
+<pre><code class="language-html">&lt;script&gt;
+   const myTimeline = new MastodonTimeline.Init({
+      instanceUrl: &quot;https://mastodon.social/&quot;,
+      timelineType: &quot;profile&quot;,
+      userId: &quot;950856&quot;,
+      profileName: &quot;@LIGMATV&quot;,
+   });
+&lt;/script&gt;
+</code></pre>
+<ol>
+<li><p>Change the <code>instanceUrl</code> to where you signed up your Mastodon account. For example, if your profile link is <code>https://mastodon.social/@example</code>, then the instance is <code>https://mastodon.social/</code>.</p>
+</li>
+<li><p><code>timelineType</code>, the type of timeline you want. In this case, you just need to make it <code>profile</code>.</p>
+</li>
+<li><p><code>userId</code>, you can find your user ID via your instance API. For example, if your profile link is <code>https://mastodon.social/@example</code>, then the API link is in <code>https://mastodon.social/api/v1/accounts/lookup?acct=example</code>. You can find it in first section (For example: <code>{&quot;id&quot;:&quot;950856&quot;,...</code>)</p>
+</li>
+<li><p><code>profileName</code>, it&#39;s your username in the instance.</p>
+</li>
+</ol>
+<p>You can see the working example in how my Mastodon account looks in this embed approach:</p>
+<iframe height="500" style="width: 100%;" scrolling="no" title="Mastodon embed timeline example" src="https://codepen.io/w3teal/embed/OPLvjwd?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/w3teal/pen/OPLvjwd">
+  Mastodon embed timeline example</a> by W3Teal (<a href="https://codepen.io/w3teal">@w3teal</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+<hr>
+<p>Just it! Considering to give star and contributing to <code>mastodon-embed-timeline</code> repository! ⭐ <a href="https://gitlab.com/idotj/mastodon-embed-timeline">https://gitlab.com/idotj/mastodon-embed-timeline</a></p>
+
+    </article>
+    <footer>
+        <p>© 2025 W3Teal<br>
+        <small>Content of this website is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise stated. <br>
+        Contact me via <a href="mailto:blog@w3teal.is-a.dev">Email</a>, <a rel="me" href="https://github.com/w3teal">GitHub</a>, and <a rel="me" href="https://fosstodon.org/@w3teal">Mastodon</a>. Or else on the <a href="/contact/">/contact page</a>, but I may take a long time to respond. <br>
+        Check out the <a href="/colophon/">/colophon page</a> to see how this website is built. Subscribe with your RSS reader from <a href="/rss.xml">rss.xml</a>.</small>
+        </p>
+    </footer>
+</body>
+</html>
