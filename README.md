@@ -1,14 +1,14 @@
-# blog.js
+# weblog.js
 
-`blog.js` is a minimal blogging using Node.js. Using [Marked.js](https://www.npmjs.com/package/marked) and [gray-matter](https://www.npmjs.com/package/gray-matter).  
+`weblog.js` is a minimal blogging using Node.js. Using [Marked.js](https://www.npmjs.com/package/marked) and [gray-matter](https://www.npmjs.com/package/gray-matter).  
 See the [blog post](https://w3teal.is-a.dev/posts/rewrite-website/) for more details.
 
 ## Quickstart
 
 1. Clone this repository and install dependencies
    ```
-   https://github.com/w3teal/blog.js.git
-   cd blog.js
+   https://github.com/w3teal/weblog.js.git
+   cd weblog.js
    npm install
    ```
 2. Build the website
@@ -20,11 +20,11 @@ See the [blog post](https://w3teal.is-a.dev/posts/rewrite-website/) for more det
 
 ### Import and output folder
 
-Instead of using the default `content` and `_site` directory, you can configure it in `const inputDir`/`outputDir` in [blog.js](https://github.com/w3teal/blog.js/blob/main/blog.js#L6-L7). (In the output folder, you can also use that directory as asset storage)
+Instead of using the default `content` and `_site` directory, you can configure it in `const inputDir`/`outputDir` in [weblog.config.json](https://github.com/w3teal/weblog.js/blob/main/weblog.config.json). (In the output folder, you can also use that directory as asset storage)
 
 ### Edit layout
 
-You can create your own custom layout by changing the  ``return `<!DOCTYPE html>`` line to `</html>` line in [blog.js](https://github.com/w3teal/blog.js/blob/main/blog.js#L38-L73).
+You can create your own custom layout by changing on the [`function buildHTML` part](https://github.com/w3teal/weblog.js/blob/17655d78594fcf4002c4d0d3c0466abbd32ff3e6/weblog.js#L33) in weblog.js.
 
 ### Frontmatter
 
