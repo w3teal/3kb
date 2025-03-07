@@ -20,7 +20,7 @@ See the [blog post](https://w3teal.is-a.dev/posts/rewrite-website/) for more det
 
 ### Import and output folder
 
-Instead of using the default `content` and `_site` directory, you can configure it in `const inputDir`/`outputDir` in [weblog.config.json](https://github.com/w3teal/weblog.js/blob/main/weblog.config.json). (In the output folder, you can also use that directory as asset storage)
+Instead of using the default `content` and `public` directory, you can configure it in `const inputDir`/`outputDir` in [weblog.config.json](https://github.com/w3teal/weblog.js/blob/main/weblog.config.json). (In the output folder, you can also use that directory as asset storage)
 
 ### Edit layout
 
@@ -44,19 +44,9 @@ If you just want to add listing to adjusted latest posts, you can use e.g. `${_l
 
 ## Deploy
 
-1. Go to the output directory and init
-   ```
-   cd _site
-   git init
-   ```
-2. Publish the repository with your desired client, like i use GitHub Desktop.
-3. Deploy
-   - You can deploy it in GitHub Pages, but it will broke in url like `USERNAME.github.io/BLOG`. If you want to deploy it in GitHub Pages, you should name the repository as `USERNAME.github.io`, or use your own [custom domain for that repo](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
-   - For easier deploy, i recommend you to use Vercel. Just go to your [Vercel dashboard](https://vercel.com/), Click "Add New" > "Project" and click "Import" to the repo.
-
----
-
-You can see the result in my [_site repo](https://github.com/w3teal/_site).
+1. Publish the repository with your desired client, like i use GitHub Desktop.
+2. Deploy
+   - For easier deploy, i recommend you to use Vercel. Just go to your [Vercel dashboard](https://vercel.com/), Click "Add New" > "Project" and click "Import" to the repo. That will automically serving `public` folder as root folder.
 
 ## Note
 
