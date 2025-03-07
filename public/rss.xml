@@ -6,6 +6,14 @@
             <description><![CDATA[I am a frontend developer from North Sumatra, Indonesia who loves solving hard problems in a light way. I love F(L)OSS software, especially the light ones!]]></description>
             
         <item>
+            <title><![CDATA[Introducing Weblog.js, my custom Node.js based SSG]]></title>
+            <link>https://w3teal.is-a.dev/posts/introducing-weblogjs/</link>
+            <description><![CDATA[The entire page, including this one, is built with the world's lightest SSG JS, and why did I build it?]]></description>
+            <pubDate>Fri, 07 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
             <title><![CDATA[Are slashes worth it?]]></title>
             <link>https://w3teal.is-a.dev/posts/slashes/</link>
             <description><![CDATA[What is the importance of sharing light information with (/it, /this)?]]></description>

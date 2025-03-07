@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing Weblog.js, my custom Node.js based SSG - W3Teal</title>
+    <meta name="description" content="The entire page, including this one, is built with the world's lightest SSG JS, and why did I build it?">
+    <link rel="icon" href="/assets/logo.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/"><img src="/assets/logo.svg" alt="W3Teal Logo" width="48" height="48"></a>
+            <nav>
+                <a href="/archives/">Post Archives</a>
+                <a href="/about/">About</a>
+                <a href="/slashes/">Slashes</a>
+            </nav>
+        </nav>
+        <h1>Introducing Weblog.js, my custom Node.js based SSG</h1>
+        <p class="date">2025-03-07</p>
+        <p class="description">The entire page, including this one, is built with the world's lightest SSG JS, and why did I build it?</p>
+    </header>
+    <article class="markdown-body">
+        <p>As I said in my previous blog, <a href="/posts/rewrite-website/">I rewrote my blog</a> with my own engine. And look how this SSG has grown quite a bit.</p>
+<p>Historically, I have been quite experienced in several SSGs that I have tried, such as <a href="https://ligmatv2.vercel.app/">Jekyll</a>, <a href="https://ligmatv3.vercel.app/">VitePress</a> (I didn&#39;t learn much about it), <a href="https://ligmatv4.vercel.app/">Docsify</a> (I made quite <a href="https://github.com/docsifyjs/awesome-docsify">a few plugins!</a>) and then <a href="https://ligmatv-11ty.vercel.app/">11ty</a> (I made the 11ty Beer template). Every time I use the following SSGs, I always feel that my blog is &quot;lacking&quot; and moving around, and I always look for the most functionality without realizing how heavy my website is, and that the blog should only be made for reading. Yes, of course readers only come in, read, and leave. Will they use all the excessive functionality that exists?</p>
+<p>I also started to realize how difficult it is to create a blog, like in 11ty I couldn&#39;t easily preview the blog I just created (it didn&#39;t use the layout in the data directory!) so I had to hard reset. And I started using DEV.to, it was easy and had a strong Dev ecosystem, it even felt very easy to create posts, and it was very heavy on the scales of DEV.to, and I once <a href="https://dev.to/w3teal/my-history-in-blogging-coding-until-i-falling-to-devto-24ac">said that DEV.to was &quot;very perfect&quot;</a>.</p>
+<p>And finally what I really wanted was convenience for both: Easy for the writer and the reader. Although I once said &quot;Blogging from the terminal? Bad idea for me.&quot;. I started getting interested in blogging again after seeing <a href="https://kevquirk.com/projects">Kev Quirk&#39;s related projects</a> like <a href="https://100daystooffload.com/">100 Days to Offload</a> and <a href="https://512kb.club/">The 512KB Club</a>. Both of these projects made me <strong>want to blog</strong> with a <strong>lightweight website</strong>. Although I ultimately wanted this to get my name on the big board, it gave me a new hobby that I am happy to share with everyone.</p>
+<p><em>After writing this long personal text, it&#39;s time to talk about Weblog.js! (Although this should be in a different post)</em></p>
+<h2>Why not another SSG?</h2>
+<p>I have discussed it in 2 previous blogs: <a href="https://dev.to/w3teal/my-history-in-blogging-coding-until-i-falling-to-devto-24ac">My history in blogging (&amp; coding) (Until i fell to Dev.to)</a> and <a href="https://w3teal.is-a.dev/posts/rewrite-website/">I have rewritten this website</a>. This question is different from &quot;Why create a custom SSG?&quot;.</p>
+<h2>Why create a custom SSG?</h2>
+<p>Previously (December 2024 to be exact), I once created a template for <a href="https://github.com/LIGMATV/11ty-beer">11ty Beer</a>. It is rich in features such as Material Design, Themes, and dialogs. And here I use the slogan &quot;Only 1 config&quot;. Why? Because many 11ty Beer templates have a lot of configs, for example Eleventy Excellent (as if I had just created a professional website). I want to use it, but I also realize that it consumes excessive resources, it is entirely made with <a href="https://www.beercss.com/">BeerCSS</a>, which is minified in size 14.3 KB. That is more than my 1 uncompressed homepage 4.55KB (including logo image resources and CSS). But I still update it because it has a good Lighthouse score, and because it takes a lot of effort. It would be a waste if I threw it away!</p>
+<p>Previously (November 2024 to be exact), I made a sort of portable SSG &quot;<a href="https://github.com/w3teal/boredown">Boredown</a>&quot;, it was completely made with only 1 file, I built it myself using Marked.js, and KaTeX Math features that I would never use. It had a good Lighthouse score (I was overthinking it at the time). It was very similar to this Weblog.js idea, it only had 1 file and 1 layout. I really liked this project, until I realized that the score was manipulated. Yes, it was all processed with JS, which would not be SEO-friendly. I wanted to make it as SSG, but I didn&#39;t know about Node.js yet. And that&#39;s Weblog.js! Boredown but static.</p>
+<h2>Results</h2>
+<p>Very satisfying! I can say this is the easiest and lightest SSG. Only 1 config and 1 layout, and you can create a whole website! I used to only think about appearance and features, now I think about speed and output. This is almost similar to <a href="https://www.karl.berlin/blog.html">Karl Bartel&#39;s thinking</a>. Let me tell you what the advantages are:</p>
+<ul>
+<li><strong><a href="/posts/rewrite-website/">Easy workflow</a></strong>: <em><code>npm install</code> (1x), <code>npm start</code>, deploy</em>.</li>
+<li><strong>Markdown and Frontmatter</strong>: There&#39;s nothing very different about the existing md files: It&#39;s just a Markdown file and a bit of Frontmatter data. Almost all SSGs have this syntax and frontmatter, so I can easily try other SSGs (except Hugo and Zola).</li>
+<li><strong>Output = layout but changed</strong>: This one may be a bit strange, but it makes the most sense: all pages are processed using the same layout, no components or layout chaining. (Still strange)</li>
+<li><strong>RSS Feed</strong>: This one uses absolute urls. Almost every blog has them, and no one hates them. It&#39;s just 1 file that&#39;s easy to create and you can use it in any RSS feed. (The layout is similar to <a href="https://nih.ar/rss.xml">RSS in nih.ar</a>)</li>
+</ul>
+<h2>Last update ever</h2>
+<p>As I said in <a href="https://github.com/w3teal/weblog.js/commit/c8b07f029f9824c07d7e5336926742c80265177d">this commit</a>, I have no intention of updating it anymore, it&#39;s pretty much perfect. Now after spending a lot of time coding and procrastinating on my blogging, I can now focus on it fully.</p>
+<p>Feel free to use it, or even create an Issue if you have any issues, and make a Pull request for something. I&#39;ll keep this <a href="https://github.com/w3teal/weblog.js">weblog.js</a> custom code alive!</p>
+
+    </article>
+    <footer>
+        <p>© 2025 W3Teal<br>
+        <small>Content of this website is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise stated. <br>
+        Contact me via <a href="mailto:blog@w3teal.is-a.dev">Email</a>, <a rel="me" href="https://github.com/w3teal">GitHub</a>, and <a rel="me" href="https://fosstodon.org/@w3teal">Mastodon</a>. Or else on the <a href="/contact/">/contact page</a>, but I may take a long time to respond. <br>
+        Check out the <a href="/colophon/">/colophon page</a> to see how this website is built. Subscribe with your RSS reader from <a href="/rss.xml">rss.xml</a>.</small>
+        </p>
+    </footer>
+</body>
+</html>
