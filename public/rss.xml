@@ -6,6 +6,22 @@
             <description><![CDATA[I am a frontend developer from North Sumatra, Indonesia who loves solving hard problems in a light way. I love F(L)OSS software, especially the light ones!]]></description>
             
         <item>
+            <title><![CDATA[Git with CLI shouldn't be this intense]]></title>
+            <link>https://w3teal.is-a.dev/posts/git-cli/</link>
+            <description><![CDATA[If only everything related to Git in the terminal could run so easily...]]></description>
+            <pubDate>Sat, 08 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
+            <title><![CDATA[Minimize CSS styles, better to be text only]]></title>
+            <link>https://w3teal.is-a.dev/posts/min-style/</link>
+            <description><![CDATA[Minimalist design doesn't have to be boring, people prefer websites that are light and focused.]]></description>
+            <pubDate>Sat, 08 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
             <title><![CDATA[Introducing Weblog.js, my custom Node.js based SSG]]></title>
             <link>https://w3teal.is-a.dev/posts/introducing-weblogjs/</link>
             <description><![CDATA[The entire page, including this one, is built with the world's lightest SSG JS, and why did I build it?]]></description>

@@ -1,13 +1,16 @@
 :root {--bg: #FAFFFF;--text: #000000;--accent: #07bbbc;--semi: #07bcbc17;}
 @media (prefers-color-scheme: dark) {:root {--bg: #000000;--text: #FAFFFF;--semi: #07bcbc5a;}}
-body {font-family: Arial, Helvetica, sans-serif;max-width: 50rem;margin: 0 auto;padding: 1rem;line-height: 1.75rem;background: var(--bg);color: var(--text);}
+body {font: 1.1em / 1.6em sans-serif;max-width: 46em;margin: 0 auto;padding: 1rem;background: var(--bg);color: var(--text);}
 h1,h2,h3,h4,h5,h6 {line-height: normal;}
 h1,h2,h3,h4,h5,h6,a {color: var(--accent);}
 header {padding: 1.25rem 0 0;}
 header>* {margin: 0;}
 nav {display: flex;align-items: center;}
 nav .logo {margin-right: auto;}
-header nav nav a {background: var(--semi);font-size: 1.1rem;padding: 0 .5rem;margin: 0 .25rem;border-radius: 5rem;}
+nav>* a {margin:  0 .3rem;}
 img,video {max-width: 100%;}
 pre {overflow: auto;}
-footer {margin-top: 2rem;line-height: 1.2rem;}
+footer {margin-top: 2rem;line-height: 1.3em;}
+code:not(pre code), pre {background: var(--semi);padding: .3em .5em;line-height: 1.6em;}
+blockquote {border-left: 5px solid var(--accent);margin: 0;padding: 0 0 0 1rem;}
+#fediring {text-align: center;margin-top: .5em;}
