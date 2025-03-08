@@ -7,10 +7,10 @@ header {padding: 1.25rem 0 0;}
 header>* {margin: 0;}
 nav {display: flex;align-items: center;}
 nav .logo {margin-right: auto;}
-nav>* a {margin:  0 .3rem;}
+nav>* a, .webring span {margin:  0 1.25vw;}
 img,video {max-width: 100%;}
 pre {overflow: auto;}
 footer {margin-top: 2rem;line-height: 1.3em;}
 code:not(pre code), pre {background: var(--semi);padding: .3em .5em;line-height: 1.6em;}
 blockquote {border-left: 5px solid var(--accent);margin: 0;padding: 0 0 0 1rem;}
-#fediring {text-align: center;margin-top: .5em;}
+.webring {text-align: center;margin-top: .5em;}
