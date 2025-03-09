@@ -6,6 +6,14 @@
             <description><![CDATA[I am a frontend developer from North Sumatra, Indonesia who loves solving hard problems in a light way. I love F(L)OSS software, especially the light ones!]]></description>
             
         <item>
+            <title><![CDATA[Blog Questions Challenge]]></title>
+            <link>https://w3teal.is-a.dev/posts/blog-question-challenge/</link>
+            <description><![CDATA[Questions related to the creation of this weblog, adapted from a post by Kev Quirk]]></description>
+            <pubDate>Sun, 09 Mar 2025 00:00:00 GMT</pubDate>
+        </item>
+    
+
+        <item>
             <title><![CDATA[Git with CLI shouldn't be this intense]]></title>
             <link>https://w3teal.is-a.dev/posts/git-cli/</link>
             <description><![CDATA[If only everything related to Git in the terminal could run so easily...]]></description>
