@@ -5,12 +5,18 @@ h1,h2,h3,h4,h5,h6 {line-height: normal;}
 h1,h2,h3,h4,h5,h6,a {color: var(--accent);}
 header {padding: 1.25rem 0 0;}
 header>* {margin: 0;}
-nav {display: flex;align-items: center;}
+nav {display: flex;align-items: center;justify-content: center;}
 nav .logo {margin-right: auto;}
-nav>* a, .webring span {margin:  0 1.25vw;}
+nav>* a, .webring span {margin:  0 .85vw;}
 img,video {max-width: 100%;}
 pre {overflow: auto;}
 footer {margin-top: 2rem;line-height: 1.3em;}
 code:not(pre code), pre {background: var(--semi);padding: .3em .5em;line-height: 1.6em;}
 blockquote {border-left: 5px solid var(--accent);margin: 0;padding: 0 0 0 1rem;}
-.webring {text-align: center;margin-top: .5em;}
+footer p {margin: .65em 0;}
+.webring {text-align: center;}
+
+/** Not By AI **/
+.notbyai{display: inline-flex; align-items: center; font: 1em/1 sans-serif; text-decoration: none; color: var(--text); border: .1em solid var(--text); border-radius: 0 1em 0 1em; padding: 0 .5em .2em .15em;}
+.notbyai small {font-size: .6em;}
+.notbyai>:first-child {font-size: 2.25em;}

@@ -28,9 +28,28 @@
         <blockquote>
 <p>Updated in March 2, 2025. Inspired by <a href="https://opus.ing/ai">Jason Morehead</a>.</p>
 </blockquote>
-<p>I only use AI for instant search purposes. Of course, the writing, images, or source code of this website are not made by AI! If you want to know who the author is, you can visit <a href="/about"><code>/about</code></a>.</p>
+<p>I only use AI for instant search purposes. Of course, the writing, images, or source code of this website are not made by AI! If you want to know who the author is, you can visit <a href="/about">/about</a>.</p>
 <p>If you feel that the English here looks &quot;robotic&quot; or &quot;not natural&quot;, it is because I am not fluent in English, so I use DeepL or Google Translate to translate. What is certain is that the ideas of these writings are not made by AI!</p>
 <p>You may be aware of the &quot;is this page useful?&quot; For many people, this clarification can help to sort and differentiate AI and human blogs. To learn more, please see <a href="https://www.bydamo.la/p/ai-manifesto">The /ai &#39;manifesto&#39;</a>.</p>
+<hr>
+<p><img src="/assets/notbyai.svg" alt="Written by Human, Not by AI"></p>
+<p>Therefore, I put this badge on every page of this website! If you like and want to use this &quot;Not By AI&quot; badge, you can visit <a href="https://notbyai.fyi/">their website</a>. </p>
+<a class="notbyai">
+    <span>&#9786;</span>
+    <span><small>written by human</small> <br> <b>not by AI</b></span>
+</a>
+
+<p>However, on this website, I made a lighter html and css clone (~400b HTML+CSS). If you want to use this clone version, use the following code:</p>
+<pre><code>&lt;a class=&quot;notbyai&quot;&gt;
+    &lt;span&gt;&amp;#9786;&lt;/span&gt;
+    &lt;span&gt;&lt;small&gt;written by human&lt;/small&gt; &lt;br&gt; &lt;b&gt;not by AI&lt;/b&gt;&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+<pre><code>.notbyai{display: inline-flex; align-items: center; font: 1.1em/1 sans-serif; text-decoration: none; color: #000; border: .1em solid #000; border-radius: 0 1em 0 1em; padding: 0 .5em .2em .15em;}
+.notbyai small {font-size: .6em;}
+.notbyai&gt;:first-child {font-size: 2.25em;}
+</code></pre>
+<p>Demo: <a href="https://codepen.io/w3teal/pen/bNGrpYV">https://codepen.io/w3teal/pen/bNGrpYV</a></p>
 
     </article>
     <footer>
@@ -38,10 +57,16 @@
         <small>Content of this website is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> unless otherwise stated. <br>
         Contact me via <a href="mailto:blog@w3teal.is-a.dev">Email</a>, <a rel="me" href="https://github.com/w3teal">GitHub</a>, and <a rel="me" href="https://fosstodon.org/@w3teal">Mastodon</a>. Or else on the <a href="/contact/">/contact page</a>, but I may take a long time to respond. <br>
         Check out the <a href="/colophon/">/colophon page</a> to see how this website is built. Subscribe with your RSS reader from <a href="/rss.xml">rss.xml</a>.</small>
+        <p>
+            <a href="/ai" class="notbyai">
+                <span>&#9786;</span>
+                <span><small>written by human</small> <br> <b>not by AI</b></span>
+            </a>
+        </p>
         <p class="webring">
-            <span><a href="https://fediring.net/previous?host=w3teal.is-a.dev"><</a> <a href="https://fediring.net/">Fediring</a> <a href="https://fediring.net/random" title="random">[🔃]</a> <a href="https://fediring.net/next?host=w3teal.is-a.dev">></a></span>
-            <span><a href="https://baccyflap.com/noai/?prv&s=wtt"><</a> <a href="https://baccyflap.com/noai/">🚫🤖 no ai webring <a href="https://baccyflap.com/noai/?rnd" title="random">[🔃]</a></a> <a href="https://baccyflap.com/noai/?nxt&s=wtt">></a></span>
-            <span><a href="https://silly.city/prev?user=w3teal"><</a> <a href="https://silly.city/">🍅 silly city <a href="https://silly.city/random" title="random">[🔃]</a></a> <a href="https://silly.city/next?user=w3teal">></a></span>
+            <span><a href="https://fediring.net/previous?host=w3teal.is-a.dev">«</a> <a href="https://fediring.net/">Fediring</a> <a href="https://fediring.net/random" title="random">[🔃]</a> <a href="https://fediring.net/next?host=w3teal.is-a.dev">»</a></span>
+            <span><a href="https://baccyflap.com/noai/?prv&s=wtt">«</a> <a href="https://baccyflap.com/noai/">🚫🤖 no ai webring</a> <a href="https://baccyflap.com/noai/?rnd" title="random">[🔃]</a> <a href="https://baccyflap.com/noai/?nxt&s=wtt">»</a></span>
+            <span><a href="https://silly.city/prev?user=w3teal">«</a> <a href="https://silly.city/">🍅 silly city</a> <a href="https://silly.city/random" title="random">[🔃]</a> <a href="https://silly.city/next?user=w3teal">»</a></span>
         </p>
     </footer>
 </body>
